@@ -1,0 +1,23 @@
+Total unique detections: 477
+
+By class:
+  car: 373
+  person: 44
+  truck: 37
+  bus: 10
+  boat: 5
+  train: 3
+  potted plant: 2
+  traffic light: 2
+  airplane: 1
+
+By color:
+  blue: 304
+  unknown: 62
+  black: 37
+  cyan: 33
+  green: 19
+  purple: 18
+  yellow: 2
+  white: 1
+  orange: 1
