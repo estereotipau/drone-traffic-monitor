@@ -254,14 +254,23 @@ class MainActivity : AppCompatActivity(), TextureView.SurfaceTextureListener {
                         override fun onSuccess(result: EmptyMsg?) {
                             is4kRecording = true
                             Log.i(DJIApp.TAG, "4K recording started")
+                            updateStatus("4K recording to SD card")
                         }
                         override fun onFailure(error: IDJIError) {
-                            Log.e(DJIApp.TAG, "4K record start failed: ${error.description()}")
+                            is4kRecording = false
+                            val desc = error.description()
+                            Log.e(DJIApp.TAG, "4K record failed: $desc")
+                            if (desc.contains("SD", ignoreCase = true) || desc.contains("card", ignoreCase = true) || desc.contains("storage", ignoreCase = true)) {
+                                updateStatus("4K failed: no SD card inserted!")
+                            } else {
+                                updateStatus("4K failed: $desc")
+                            }
                         }
                     })
             }
             override fun onFailure(error: IDJIError) {
                 Log.e(DJIApp.TAG, "Set video mode failed: ${error.description()}")
+                updateStatus("Video mode failed: ${error.description()}")
             }
         })
     }
