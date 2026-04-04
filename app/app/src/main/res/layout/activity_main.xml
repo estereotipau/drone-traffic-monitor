@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black">
+
+    <TextureView
+        android:id="@+id/video_surface"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.ezequiel.djimini4pro.DetectionOverlay
+        android:id="@+id/detection_overlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <TextView
+        android:id="@+id/status_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|start"
+        android:padding="16dp"
+        android:textColor="@android:color/white"
+        android:textSize="14sp"
+        android:shadowColor="@android:color/black"
+        android:shadowRadius="3"
+        android:text="Initializing SDK..." />
+
+    <TextView
+        android:id="@+id/telemetry_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|end"
+        android:padding="16dp"
+        android:textColor="@android:color/white"
+        android:textSize="13sp"
+        android:fontFamily="monospace"
+        android:shadowColor="@android:color/black"
+        android:shadowRadius="3"
+        android:text="" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="24dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/photo_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:text="Photo"
+            style="@style/Widget.AppCompat.Button.Small" />
+
+        <Button
+            android:id="@+id/yolo_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:text="YOLO: OFF"
+            style="@style/Widget.AppCompat.Button.Small" />
+
+        <Button
+            android:id="@+id/model_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:text="VisDrone"
+            style="@style/Widget.AppCompat.Button.Small" />
+
+        <Button
+            android:id="@+id/roi_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:text="ROI"
+            style="@style/Widget.AppCompat.Button.Small" />
+
+        <Button
+            android:id="@+id/toggle_4k_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:text="4K: OFF"
+            style="@style/Widget.AppCompat.Button.Small" />
+
+        <Button
+            android:id="@+id/record_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:text="REC"
+            android:backgroundTint="#FF880000"
+            style="@style/Widget.AppCompat.Button.Small" />
+
+        <Button
+            android:id="@+id/rth_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="RTH"
+            android:backgroundTint="#FFFF0000"
+            style="@style/Widget.AppCompat.Button.Small" />
+    </LinearLayout>
+</FrameLayout>

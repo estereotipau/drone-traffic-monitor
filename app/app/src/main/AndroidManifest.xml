@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" android:maxSdkVersion="32" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <uses-feature android:name="android.hardware.usb.host" android:required="false"/>
+    <uses-feature android:name="android.hardware.usb.accessory" android:required="true"/>
+
+    <application
+        android:name=".DJIApp"
+        android:allowBackup="true"
+        android:extractNativeLibs="true"
+        android:requestLegacyExternalStorage="true"
+        android:icon="@android:drawable/ic_menu_camera"
+        android:label="DJI Mini 4 Pro"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+
+        <meta-data
+            android:name="com.dji.sdk.API_KEY"
+            android:value="${API_KEY}"/>
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:screenOrientation="landscape"
+            android:configChanges="orientation|screenSize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".UsbAttachActivity"
+            android:theme="@style/Theme.AppCompat.Translucent"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.hardware.usb.action.USB_ACCESSORY_ATTACHED" />
+            </intent-filter>
+            <meta-data
+                android:name="android.hardware.usb.action.USB_ACCESSORY_ATTACHED"
+                android:resource="@xml/accessory_filter" />
+        </activity>
+    </application>
+</manifest>

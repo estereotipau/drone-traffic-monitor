@@ -1,0 +1,45 @@
+# Build outputs
+app/build/
+app/app/build/
+app/.gradle/
+
+# Local configuration (contains API keys and SDK paths)
+app/local.properties
+app/gradle.properties
+
+# YOLO models (too large for git, downloaded at build/runtime)
+app/app/src/main/assets/*.onnx
+app/app/src/main/assets/*.pt
+app/app/src/main/assets/*.tflite
+pipeline/*.pt
+
+# Gradle wrapper jar (users regenerate)
+app/gradle/wrapper/gradle-wrapper.jar
+
+# IDE
+.idea/
+*.iml
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Flight data (user-specific)
+flights/
+docs/*.MP4
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Analysis data (user-specific)
+analysis/
+
+# Internal project notes
+context.md
+
+# Downloaded model weights
+yolov8s.pt
+yolov8n.pt
+yolov8m.pt

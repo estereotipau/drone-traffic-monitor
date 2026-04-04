@@ -1,0 +1,9 @@
+org.gradle.jvmargs=-Xmx4608M
+android.useAndroidX=true
+android.enableJetifier=true
+android.nonTransitiveRClass=false
+android.disableResourceValidation=true
+
+# Get your DJI App Key at https://developer.dji.com/
+# Package name must match: com.ezequiel.djimini4pro
+AIRCRAFT_API_KEY=your_dji_app_key_here

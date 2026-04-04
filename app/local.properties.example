@@ -1,0 +1,3 @@
+# Point these to your Android SDK and NDK installations
+sdk.dir=C:\\Android
+ndk.dir=C:\\Android\\ndk\\21.4.7075529
