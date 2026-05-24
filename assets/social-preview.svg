@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="640" viewBox="0 0 1280 640" font-family="DejaVu Sans Mono, Menlo, monospace">
+  <rect x="0" y="0" width="1280" height="640" fill="#282828"/>
+  <rect x="0" y="0" width="1280" height="10" fill="#98971A"/>
+
+  <text x="70" y="205" fill="#EBDBB2" font-size="70" font-weight="bold">drone-traffic-monitor</text>
+  <text x="76" y="272" fill="#A89984" font-size="31">Real-time vehicle detection from a DJI Mini 4 Pro</text>
+  <text x="76" y="314" fill="#928374" font-size="28">on-device YOLOv8 &#183; live dashboard &#183; 4K pipeline</text>
+
+  <!-- drone-view detection motif -->
+  <g transform="translate(76,360)">
+    <rect x="0" y="0" width="1128" height="190" rx="8" fill="#32302F"/>
+    <!-- lane markings -->
+    <line x1="0" y1="95" x2="1128" y2="95" stroke="#504945" stroke-width="3" stroke-dasharray="34 26"/>
+    <!-- detected vehicles: body + bounding box + label -->
+    <g font-size="16" font-weight="bold">
+      <rect x="70"  y="48"  width="92"  height="46" rx="4" fill="#504945"/>
+      <rect x="70"  y="48"  width="92"  height="46" fill="none" stroke="#B8BB26" stroke-width="3"/>
+      <text x="70"  y="40"  fill="#B8BB26">car .94</text>
+
+      <rect x="300" y="104" width="120" height="40" rx="4" fill="#504945"/>
+      <rect x="300" y="104" width="120" height="40" fill="none" stroke="#B8BB26" stroke-width="3"/>
+      <text x="300" y="160" fill="#B8BB26">truck .79</text>
+
+      <rect x="540" y="40"  width="80"  height="44" rx="4" fill="#504945"/>
+      <rect x="540" y="40"  width="80"  height="44" fill="none" stroke="#8EC07C" stroke-width="3"/>
+      <text x="540" y="32"  fill="#8EC07C">car .91</text>
+
+      <rect x="760" y="110" width="118" height="42" rx="4" fill="#504945"/>
+      <rect x="760" y="110" width="118" height="42" fill="none" stroke="#B8BB26" stroke-width="3"/>
+      <text x="760" y="166" fill="#B8BB26">car .88</text>
+
+      <rect x="980" y="52"  width="86"  height="48" rx="4" fill="#504945"/>
+      <rect x="980" y="52"  width="86"  height="48" fill="none" stroke="#8EC07C" stroke-width="3"/>
+      <text x="980" y="44"  fill="#8EC07C">car .85</text>
+    </g>
+  </g>
+
+  <text x="70" y="600" fill="#689D6A" font-size="25">github.com/estereotipau/drone-traffic-monitor</text>
+  <text x="1206" y="600" fill="#504945" font-size="24" text-anchor="end">Kotlin &#183; YOLOv8</text>
+</svg>
